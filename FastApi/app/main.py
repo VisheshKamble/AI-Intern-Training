@@ -4,6 +4,10 @@ from fastapi import FastAPI, HTTPException, Query
 
 from app.services.products import get_all_products, get_product_by_id
 
+from pydantic import BaseModel , Field
+
+from typing import Annotated
+
 app = FastAPI(
     title="Products API",
     version="1.0.0",
@@ -77,6 +81,17 @@ def get_product(product_id: str):
 
     return product
 
+class Product(BaseModel): 
+    id:str
+    sku: Annotated[str,
+                    Field
+                    (description="Stock Keeping Unit",
+                      min_length=6,
+                      max_length=30,
+                      example = "734-hjd-768-3d")]
+    name:str
+
+
 @app.post("/products" , status_code=201)
-def create_product(product):
+def create_product(product: Product):
     return product
