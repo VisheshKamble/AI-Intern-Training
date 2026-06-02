@@ -6,7 +6,8 @@ from pydantic import (
     Field,
     AnyUrl,
     field_validator,
-    model_validator
+    model_validator,
+    computed_field
 )
 
 
@@ -159,3 +160,9 @@ class Product(BaseModel):
             )                                             
         
         return model
+    
+    @computed_field
+    @property
+    def discounted_price(self) -> float:
+        return round(self.price * (1 - self.discount_percent / 100), 2)
+    
