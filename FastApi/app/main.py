@@ -76,3 +76,7 @@ def get_product(product_id: str):
         )
 
     return product
+
+@app.post("/products" , status_code=201)
+def create_product(product):
+    return product
