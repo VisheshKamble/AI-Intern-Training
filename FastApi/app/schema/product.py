@@ -149,3 +149,13 @@ class Product(BaseModel):
             )
 
         return value
+    
+    @model_validator(mode="after")
+    @classmethod
+    def validate_business_rules(cls , model: "Product"):
+        if model.stock == 0 and model.is_active:
+            raise ValueError(
+                "Product cannot be active if stock is zero"
+            )                                             
+        
+        return model
