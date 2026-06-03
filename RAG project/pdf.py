@@ -1,11 +1,17 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import TokenTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 data = PyPDFLoader("RAG project/GRU.pdf")
 
 docs = data.load()
 
-splitter = TokenTextSplitter (
+#splitter = TokenTextSplitter (
+    #chunk_size = 1000, 
+    #chunk_overlap = 200
+#)
+
+splitter = RecursiveCharacterTextSplitter(
     chunk_size = 1000, 
     chunk_overlap = 200
 )
