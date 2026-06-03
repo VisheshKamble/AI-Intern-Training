@@ -1,0 +1,50 @@
+fastapi
+uvicorn
+
+# LangChain
+
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+
+# Hugging Face
+
+langchain-huggingface
+huggingface-hub
+transformers
+sentence-transformers
+torch
+
+# Vector Database
+
+chromadb
+faiss-cpu
+
+# Document Loaders
+
+pypdf
+pymupdf
+python-docx
+unstructured
+
+# Environment
+
+python-dotenv
+
+# Validation
+
+pydantic
+
+# API
+
+python-multipart
+
+# Tokenization
+
+tiktoken
+
+# Utilities
+
+numpy
+pandas

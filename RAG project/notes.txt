@@ -1,0 +1,110 @@
+# Software Engineering – Notes
+
+## Definition
+
+Software Engineering is the systematic approach to designing, developing, testing, deploying, and maintaining software applications.
+
+---
+
+## Objectives of Software Engineering
+
+* Develop high-quality software
+* Reduce development cost
+* Deliver software on time
+* Improve maintainability
+* Increase reliability and performance
+
+---
+
+## Software Development Life Cycle (SDLC)
+
+### 1. Requirement Analysis
+
+Collect and analyze user requirements.
+
+### 2. System Design
+
+Create architecture, UI design, database structure, and system planning.
+
+### 3. Development
+
+Write code and build application features.
+
+### 4. Testing
+
+Identify and fix bugs using different testing methods.
+
+### 5. Deployment
+
+Release software to users.
+
+### 6. Maintenance
+
+Update software and resolve issues after deployment.
+
+---
+
+## Types of Software
+
+* System Software
+* Application Software
+* Web Applications
+* Mobile Applications
+* Embedded Systems
+
+---
+
+## Software Development Models
+
+* Waterfall Model
+* Agile Model
+* Spiral Model
+* Incremental Model
+* Prototype Model
+
+---
+
+## Software Testing Types
+
+* Unit Testing
+* Integration Testing
+* System Testing
+* Acceptance Testing
+
+---
+
+## Characteristics of Good Software
+
+* Reliability
+* Efficiency
+* Scalability
+* Maintainability
+* Security
+* Usability
+
+---
+
+## Common Roles in Software Engineering
+
+* Frontend Developer
+* Backend Developer
+* Full Stack Developer
+* Mobile App Developer
+* QA Engineer
+* DevOps Engineer
+* Data Engineer
+
+---
+
+## Popular Technologies
+
+* Programming: Java, Python, Kotlin, JavaScript
+* Database: MySQL, PostgreSQL, MongoDB
+* Frameworks: Flutter, React, FastAPI
+* Tools: Git, Docker, VS Code
+
+---
+
+## Conclusion
+
+Software Engineering helps build structured, scalable, and reliable software systems by following organized development practices.
