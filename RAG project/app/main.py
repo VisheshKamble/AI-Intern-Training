@@ -10,6 +10,7 @@ load_dotenv()
 #docs = data.load()
 
 data = PyPDFLoader("RAG project/GRU.pdf") #Loading the PDF file 
+
 docs = data.load()
 
 template = ChatPromptTemplate.from_messages([
