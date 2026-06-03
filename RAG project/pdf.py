@@ -1,8 +1,16 @@
 from langchain_community.document_loaders import PyPDFLoader
+from langchain_text_splitters import TokenTextSplitter
 
 data = PyPDFLoader("RAG project/GRU.pdf")
 
 docs = data.load()
 
-print (docs[2])
+splitter = TokenTextSplitter (
+    chunk_size = 1000, 
+    chunk_overlap = 200
+)
+
+chunks = splitter.split_documents(docs)
+
+print (chunks[0])
 
