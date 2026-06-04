@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+langchain
+langchain-core
+langchain-community
+langchain-huggingface
+huggingface-hub
+transformers
+torch
+sentence-transformers
+python-dotenv
+pydantic
+streamlit
