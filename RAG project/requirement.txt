@@ -27,6 +27,8 @@ pypdf
 pymupdf
 python-docx
 unstructured
+arxiv==1.4.8
+feedparser==6.0.10
 
 # Environment
 
