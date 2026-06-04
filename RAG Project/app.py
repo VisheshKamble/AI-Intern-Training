@@ -4,14 +4,12 @@ import streamlit as st
 from pathlib import Path
 from dotenv import load_dotenv
 
-# LangChain
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
-
 
 load_dotenv()
 
@@ -25,7 +23,6 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 if not GROQ_API_KEY:
     st.error("GROQ_API_KEY missing in .env")
     st.stop()
-
 
 st.markdown("""
 <style>
@@ -61,11 +58,6 @@ def get_embedding_model():
     return HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2"
     )
-
-
-# ==========================
-# DOCUMENT PROCESSING
-# ==========================
 
 def process_document(uploaded_file):
 
@@ -105,11 +97,6 @@ def process_document(uploaded_file):
     )
 
     return vectorstore
-
-
-# ==========================
-# SIDEBAR
-# ==========================
 
 with st.sidebar:
 
