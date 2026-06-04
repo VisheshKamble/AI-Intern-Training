@@ -4,7 +4,7 @@ load_dotenv()
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnableParallel
+from langchain_core.runnables import RunnableParallel , RunnableLambda
 
 model = ChatGroq(model="meta-llama/llama-4-scout-17b-16e-instruct")
 
@@ -23,11 +23,14 @@ prompt2 = ChatPromptTemplate.from_template(
 topic = "Machine Learning"
 
 chain = RunnableParallel ({
-    "explain" :prompt1 | model | parser,
-    "applications" : prompt2 | model | parser
+    "explain" : RunnableLambda(lambda x :x ['explain']) | prompt1 | model | parser,
+    "applications" : RunnableLambda(lambda x :x ['applications']) | prompt2 | model | parser
 })
 
-result = chain.invoke({ "topic" : topic })
+result = chain.invoke({ 
+    "explain" : {"topic" : "Machine Learning" },
+    "applications" : {"topic" : "Software Engineering" }
+})
 
 print(result['explain'])
 print(result['applications'])
