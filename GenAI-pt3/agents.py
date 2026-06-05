@@ -100,7 +100,7 @@ agent = create_agent(
     middleware=[human_approval]
 )
 
-# APPLICATION LOOP
+# Application Loop
 
 print("[bold green]City Agent Initialized! Type 'exit' to quit.[/bold green]")
 
