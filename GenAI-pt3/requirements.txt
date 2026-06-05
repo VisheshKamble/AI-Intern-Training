@@ -1,4 +1,3 @@
-fastapi
 uvicorn
 langchain
 langchain-core
@@ -11,3 +10,6 @@ sentence-transformers
 python-dotenv
 pydantic
 streamlit
+langchain-groq
+langchain-tavily
+tavily
