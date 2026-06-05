@@ -9,7 +9,6 @@ from rich import print
 from langchain.agents import create_agent 
 from langchain.agents.middleware import wrap_tool_call
 
-
 load_dotenv()
 
 # Weather Tool 
