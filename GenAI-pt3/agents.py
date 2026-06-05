@@ -9,10 +9,10 @@ from rich import print
 from langchain.agents import create_agent 
 from langchain.agents.middleware import wrap_tool_call
 
-# Load environment variables from your .env file
+
 load_dotenv()
 
-# TOOL 1: Weather Tool (OpenWeatherMap API)
+# Weather Tool 
 
 @tool
 def get_weather(city: str) -> str:
@@ -33,7 +33,7 @@ def get_weather(city: str) -> str:
     
     return f"Weather in {city}: {desc}, {temp}°C"
 
-# TOOL 2: News Tool (Tavily Search API)
+#News Tool 
 
 tavily_client = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
 
@@ -66,13 +66,9 @@ def get_news(city: str) -> str:
     return f"Latest news in {city}:\n\n" + "\n\n".join(news_list)
 
 
-
-#: Groq Integration
-
-# Initializing ChatGroq
 llm = ChatGroq(model="meta-llama/llama-4-scout-17b-16e-instruct")
 
-# MIDDLEWARE: Human-In-The-Loop Approval
+#Human-In-The-Loop Approval
 
 @wrap_tool_call
 def human_approval(request, handler):
