@@ -1,3 +1,5 @@
+# A very simple hello world graph agent using LangGraph 
+# start -> greeting node -> end
 from typing import List, Dict, TypedDict
 from langgraph.graph import StateGraph 
 
