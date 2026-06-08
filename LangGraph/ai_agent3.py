@@ -76,6 +76,7 @@ graph.add_edge("tools", "our_agent")
 
 app = graph.compile()
 
+# for pretty printing the stream output
 def print_stream(stream):
     for s in stream:
         message = s["messages"][-1]
