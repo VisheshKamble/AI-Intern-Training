@@ -1,3 +1,5 @@
+#RAG Agent Example using LangGraph
+# This is a more complex example of a RAG agent that uses a retriever tool to
 from dotenv import load_dotenv
 import os
 from langgraph.graph import StateGraph, END
